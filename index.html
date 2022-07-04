@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starbucks Website Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="./assets/logo.png" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's new</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+        <p>
+          Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington. It is the world's largest coffeehouse chain.
+          As of November 2021, the company had 33,833 stores in 80 countries, 15,444 of which were located in the United States. Out of Starbucks' U.S.-based stores, over 8,900 are company-operated, while the remainder are licensed.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="imgBox">
+        <img src="./assets/img1.png" class="starbucks">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="./assets/thumb1.png" onclick="imgSlider('./assets/img1.png'); changeCircleColor('#017143')"></li>
+      <li><img src="./assets/thumb2.png" onclick="imgSlider('./assets/img2.png'); changeCircleColor('#eb7495')"></li>
+      <li><img src="./assets/thumb3.png" onclick="imgSlider('./assets/img3.png'); changeCircleColor('#d752b1')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="./assets/facebook.png"></li>
+      <li><a href="#"><img src="./assets/twitter.png"></li>
+      <li><a href="#"><img src="./assets/instagram.png"></li>
+    </ul>
+  </section>
+  <script type="text/javascript">
+    function imgSlider(anything) {
+      document.querySelector('.starbucks').src = anything;
+    }
+
+    function changeCircleColor(color) {
+      const circle = document.querySelector('.circle');
+      circle.style.background = color;
+    }
+  </script>
+</body>
+</html>
